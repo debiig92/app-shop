@@ -17,3 +17,10 @@ Route::get('/', 'TestController@welcome');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin/products', 'ProductController@index'); // Listado de productos
+
+Route::get('/admin/products/create', 'ProductController@create'); //ver formulario de creacion de productos
+
+Route::post('/admin/products', 'ProductController@store'); // registrar poducto, almacenar datos
+
