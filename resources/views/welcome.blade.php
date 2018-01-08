@@ -33,7 +33,7 @@
                   <div class="icon icon-primary">
                     <i class="material-icons">chat</i>
                   </div>
-                  <h4 class="info-title">First Feature</h4>
+                  <h4 class="info-title">Atendemos tus dudas</h4>
                   <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
                 </div>
                         </div>
@@ -42,7 +42,7 @@
                   <div class="icon icon-success">
                     <i class="material-icons">verified_user</i>
                   </div>
-                  <h4 class="info-title">Second Feature</h4>
+                  <h4 class="info-title">Pago seguro</h4>
                   <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
                 </div>
                         </div>
@@ -51,7 +51,7 @@
                   <div class="icon icon-danger">
                     <i class="material-icons">fingerprint</i>
                   </div>
-                  <h4 class="info-title">Third Feature</h4>
+                  <h4 class="info-title">Información Rápida</h4>
                   <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
                 </div>
                         </div>
@@ -67,7 +67,9 @@
               @foreach($products as $product)
               <div class="col-md-4">
                           <div class="team-player">
-                              <img src="{{ $product->images->first()}}" alt="Thumbnail Image" class="img-raised img-circle">
+                            
+                              <img src="{{$product->images()->first()->image}}" alt="{{$product->name}}" class="img-raised img-circle">
+                   
                               <h4 class="title">{{$product->name}}<br />
                                     <small class="text-muted">{{$product->category->name}}</small>
                               </h4>
