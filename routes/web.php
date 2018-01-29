@@ -24,3 +24,8 @@ Route::get('/admin/products/create', 'ProductController@create'); //ver formular
 
 Route::post('/admin/products', 'ProductController@store'); // registrar poducto, almacenar datos
 
+Route::get('/admin/products/{id}/edit', 'ProductController@edit'); //ver formulario de edicion de productos
+
+Route::post('/admin/products/{id}/edit', 'ProductController@update'); // actualizar producto
+
+Route::delete('/admin/products/{id}', 'ProductController@destroy'); // eliminar producto
